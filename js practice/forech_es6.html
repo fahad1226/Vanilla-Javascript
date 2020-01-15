@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    const fruits = ['apples','oranges','lemon','bananna','Mango'];
+
+    fruits.forEach((fruit,index) => {
+        console.log((index+1),fruit);
+    });
+
+    const singleFruit = fruits.map((fruit) => fruit.slice(0,-1).toLowerCase());
+    console.log(singleFruit);
+    
+    
+    </script>
+</body>
+</html>

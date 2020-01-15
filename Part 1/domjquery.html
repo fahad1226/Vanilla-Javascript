@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Bootstrap 4/dist/css/bootstrap.min.css">
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <div class="container py-3">
+        <button id="btn" class="btn btn-dark">Action</button>
+        <p id="para" class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, quia?</p>
+    </div>
+</body>
+<script>
+
+    $(document).ready(function() {
+        $("#btn").click(function() {
+            //let txt = $("#para").text();
+            //alert(txt);
+            //$("#para").text("paragraph has changed");
+            $("#para").html("<h4>Hello World</h4>");
+        });
+    });
+
+</script>
+</html>

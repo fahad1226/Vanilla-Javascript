@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Start and Stop</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="jquery.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <style media="screen">
+        .box {
+
+            background: black;
+            width: 500px;
+            height: 300px;
+            text-align: center;
+            box-shadow: 5px 10px #888888;
+            margin-top: 17px;
+            display: none;
+        }
+
+        .showbutton {
+            margin-left: 470px;
+            margin-top: 20px;
+        }
+
+        .hidebutton {
+
+            margin-top: 20px;
+        }
+
+        .stopbutton {
+            margin-top: 20px;
+
+        }
+    </style>
+
+    <button id="show" type="button" class="btn btn-secondary showbutton px-5">show</button>
+    <button id="hide" type="button" class="btn btn-secondary hidebutton px-5">Hide</button>
+    <button id="stop" type="button" class="btn btn-secondary stopbutton px-5">Stop</button>
+
+    <div id="box" class="box container">
+        <h1 class="text-white py-5">Fahad Bin Munir</h1>
+    </div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //show code start
+            $("#show").click(function() {
+
+                $("#box").slideDown(3000, function() {
+                    $("#box").css("background", "orange");
+                    $("#box").html("<h1>DONE</h1>");
+                });
+            });
+
+            $("#hide").click(function() {
+                $("#box").slideUp(2000, function() {
+                    alert("it's now hidden");
+                });
+            });
+
+            $("#stop").click(function() {
+                $("#box").stop();
+            });
+
+        });
+    </script>
+<!--
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#show").click(function() {
+
+                $("#box").css("background", "green").fadeIn(2000).fadeOut(2000);
+
+            });
+
+            $("#stop").click(function() {
+                $("#box").stop();
+            });
+        });
+    </script> -->
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Bootstrap 4/dist/css/bootstrap.min.css">\
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <button id="btn" class="btn btn-secondary btn-lg">Click</button>
+    </div>
+    <br>
+    <div class="container">
+            <div id="cube" class="row" style="height: 200px">
+                <div class="col-2 bg-dark">
+                    <h3 class="text-center display-4 py-5 text-white">Cube</h3>
+                </div>
+            </div>
+    </div>
+    
+</body>
+<script>
+    $(document).ready(function() {
+        $("#btn").click(function(){
+            $("#cube").animate({
+                width: [ "toggle", "swing" ],
+                height: [ "toggle", "swing" ],
+                opacity: 0.25
+                
+            },1000,function(){
+                $(this).after("amimation completed");
+            });
+        });
+    });
+
+
+</script>
+</html>

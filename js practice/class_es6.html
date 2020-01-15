@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class Person {
+        constructor(name,age) {
+            this.name = name;
+            this.age = age;
+        }
+        greet() {
+            return `Hello,My name is ${this.name} and i'm ${this.age}`;
+        }
+    }
+
+    const person1 = new Person('Hopper',36);
+    const person2 = new Person('Will',12);
+    const grt = person1.greet();
+    const grt1 = person2.greet();
+    console.log(grt);
+    console.log(grt1);
+    console.log(person1.name,person1.age);
+    console.log(person2.name,person2.age);
+
+
+
+
+    class Customer extends Person {
+        constructor(name,age,balance) {
+            super(name,age);
+            this.balance = balance;
+        }
+        greet() {
+            return `and my balance is ${this.balance} `
+        }
+    }
+
+
+    const cust1 = new Customer('John',33,'1000k');
+
+    console.log(cust1.greet());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

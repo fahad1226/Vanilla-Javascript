@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Chaining</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="jquery.js" charset="utf-8"></script>
+</head>
+
+<style media="screen">
+    .box {
+        width: 300px;
+        height: 200px;
+        background: black;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .start {
+        margin-left: 530px;
+        margin-top: 15px;
+        width: 100px;
+    }
+
+    .stop {
+        margin-top: 10px;
+    }
+</style>
+
+<body>
+    <button id="start" type="button" class="btn btn-secondary start" name="button">Start</button>
+    <div id="box" class="container box">
+        <h3 class="text-white py-5">Fahad Bin Munir</h3>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#start").click(function() {
+                $("#box").animate({
+                    opacity: '1.50',
+                    marginLeft: '200px'
+                    },1000).slideUp(2000).slideDown(2000).fadeOut(3000).fadeIn("slow", function() {
+                    $("#box").css("background", "yellow", 2000);
+                    alert('end');
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>

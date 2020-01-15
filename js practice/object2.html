@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>about object</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var obj = {
+            f_name: "Fahad",
+            l_name: "Bin Munir",
+            occupation: "Student",
+            Id: "16031102011116",
+            fullName: function() {
+                return this.f_name + " " + this.l_name;
+            }
+        };
+        var fullname = obj.fullName();
+        document.write(fullname);
+    </script>
+
+    <button onclick="this.innerHTML = Date()">The time is?</button>
+
+
+    <script type="text/javascript">
+        var bakkho = "ABCDEFGHIJKLMNOPQERSTUVWXYz";
+        var sln = bakkho.length;
+        document.write("<br>");
+        document.write(sln);
+    </script>
+
+    <script type="text/javascript">
+        var str = "Please locate where 'locate' occurs!";
+        document.write("<br>")
+        document.write(str.search("locate"));
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

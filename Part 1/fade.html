@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="jquery.js" charset="utf-8"></script>
+
+</head>
+<style media="screen">
+    .box {
+        width: 300px;
+        height: 200px;
+        background: black;
+        text-align: center;
+        margin-top: 20px;
+
+    }
+
+    .start {
+        margin-left: 530px;
+        margin-top: 10px;
+
+    }
+
+    .stop {
+        margin-top: 10px;
+    }
+</style>
+
+<body>
+    <button id="start" type="button" class="btn btn-secondary start px-5">Start</button>
+    <button id="stop" type="button" class="btn btn-danger stop px-5">Stop</button>
+    <div class="row">
+
+        <div id="box1" class="container box py-5">
+            <h1 class="text-white">Fahad</h1>
+        </div>
+        <div class="w-100"></div>
+
+        <div id="box2" class="container box py-5">
+            <h1 class="text-white">haha</h1>
+        </div>
+
+    </div>
+
+
+    <script>
+        $(document).ready(function() {
+            $("#start").click(function() {
+                $("#box1").animate({
+                    marginLeft: '200px',
+                    opacity: '4.50',
+                    height: '+=100',
+                    width: '+=100px',
+                }, 3000, function() {
+                    $("#box1").css("background", "orange");
+                    alert('a');
+                });
+            });
+        });
+    </script>
+
+
+
+
+    <script>
+        $(document).ready(function() {
+            $("#start").click(function() {
+                $("#start").text("Hide");
+                $("#box1").fadeToggle(2000, function() {
+                    $("#box1").css("background", "yellow");
+                    $("#box1").html("<h3>Done</h3>");
+                });
+                $("#box2").fadeTo("slow",0.30);
+                $("#box2").css("background", "orange");
+            });
+            $("#stop").click(function(){
+                $("#box1").stop();
+                $("#box2").stop();
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>

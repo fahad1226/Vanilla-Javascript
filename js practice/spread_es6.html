@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    //spread operator
+    const arr = [1,2,3,4,5];
+    const arr2 = [...arr,6,7,8];
+    const arr3 = [...arr2.filter((nums) => nums !== 6 && nums !== 2 && nums !== 1)];
+
+    console.log(arr3);
+
+
+    let person = {
+        name: 'Fahad',
+        age: 21,
+        University: 'Premier University'
+    }
+
+
+    let newPerson = {
+        ...person,
+        email: 'fahad@gmail.com'
+    }
+
+    //console.log(newPerson);
+
+
+
+    
+    </script>
+</body>
+</html>

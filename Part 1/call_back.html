@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>jquery call back and start stop</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="jquery.js"></script>
+</head>
+
+<style media="screen">
+    .box {
+        width: 300px;
+        border: 15px solid grey;
+        padding: 50px;
+        margin: 20px;
+        background-color: black;
+    }
+</style>
+
+<body>
+
+    <div class="container py-2">
+        <button id="btn" type="button" class="btn btn-secondary btn-lg" name="button">start</button>
+        <button id="btn2" type="button" class="btn btn-danger btn-lg" name="button">stop</button>
+        <h1 id="call" class="box">fahad</h1>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function() {
+        $("#btn").click(function() {
+            $("#call").animate({
+                marginLeft: '700px',
+                height: '250px',
+                width: '250px'
+            }, 5000,function(){
+                alert('called');
+            });
+        });
+        $("#btn2").click(function() {
+            $("#call").stop();
+        })
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Evenet Handler</title>
+    <script src="jquery.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container py-3">
+        <button id="btn1" type="button" class="btn btn-primary">Hide</button>
+        <h1 id="name1">Fahad Bin Munir</h1>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            let btn = $("#btn1").click(function() {
+                $("#name1").val("Dolly Duck");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

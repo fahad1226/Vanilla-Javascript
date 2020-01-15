@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>animate jQuery</title>
+    <script src="jquery.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+    <button id="show" type="button">show</button>
+    <button id="hide" type="button">Hide</button>
+    <h1 style="display: none;width:250px;padding:100px;text-align: center;color:white;background:black;" id="blck">Fahad Bin Munir</h1>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("#show").click(function() {
+
+                $("#blck").slideDown(2000, function() {
+
+                    $("#blck").css("background", "yellow");
+                    $("#blck").html("I'm Done");
+                });
+
+            });
+
+            $("#hide").click(function() {
+
+                $("#blck").slideUp(2000, function() {
+                    alert("gone");
+
+                });
+            })
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>

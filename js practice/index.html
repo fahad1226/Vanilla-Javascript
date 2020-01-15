@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Javascript Learning</title>
+
+</head>
+
+<body>
+    <p>this is for testing purpose</p>
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+        var x = "fahad";
+        var d = 67;
+        var e = 45;
+        let z = x + " " + (d + e);
+        document.getElementById('demo').innerHTML = "<h4>this is the result</h4>" + z;
+    </script>
+
+    <p>this is our array</p>
+    <p id="id"></p>
+
+    <script type="text/javascript">
+        var ar = ['Fahad', 'asif', 'enan', 'ishmam', 'ashim'];
+        document.getElementById('id').innerHTML = "array is " + ar;
+    </script>
+
+    <h2>this is our dictionary</h2>
+
+    <h2 id="dic"></h2>
+
+    <script type="text/javascript">
+        var dic = {
+            firstname: "fahad",
+            lastname: "bin munir",
+            age: 50
+        };
+        document.getElementById('dic').innerHTML = "dictionary is " + dic['firstname'];
+
+        document.write(dic['lastname']);
+        document.write("<br>");
+        var kochu = dic['age'];
+        document.write("age is " + kochu);
+        document.write("<br>");
+        document.write(typeof("fahad"));
+        document.write("<br>");
+        document.write(typeof(23654));
+        var car = null;
+        document.write("<br>");
+        document.write(typeof(car));
+        document.write("</br>");
+        var geso = false;
+        if (geso) {
+            document.write("tumi school e geso");
+        } else {
+            document.write("school e jaw nai");
+        }
+
+        document.write("</br>");
+
+        document.write(typeof([1,2,3,4,5]));
+
+
+    </script>
+
+
+    <script>
+        document.write('today is '+Date())
+    </script>
+
+
+</body>
+
+</html>

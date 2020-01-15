@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="jquery.js" charset="utf-8"></script>
+    </head>
+    <body>
+    <button id="show" type="button">show animation</button>
+    <button type="button" id="stop">Stop</button>
+    <h2 id="box" style="width:300px;padding:50px;text-align:center;color:white;background:black;">Something About jQuery</h2>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#show").click(function() {
+                    $("#box").animate({
+                        left: '250px',
+                        opacity: '0.5',
+                        height: '-=150px',
+                        width: '+=150px'
+                        },4000);
+                        // $("#box").animate({width: '300px', opacity: '5.0'}, "slow");
+                        // $("#box").animate({height: '100px', opacity: '0.4'}, "slow");
+                        // $("#box").animate({height: '100px', opacity: '0.4'}, "slow");
+                        });
+                        $("#stop").click(function(){
+
+                            $("#box").stop();
+                    })
+                });
+        </script>
+    </body>
+</html>

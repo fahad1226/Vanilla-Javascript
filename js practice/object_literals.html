@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Introduction To object in Javascript</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        const circle = {
+            radius:1,  // radius ekhanem property
+            location: { // location ekhane property ## property use hoy value hold korar jonno
+                x:1,
+                y:2,
+                z:3
+            },
+            draw: function() { // draw ekhane function ##function use hoy kono logic likhar jonno
+                document.write("draw the circle");
+            }
+        }
+
+        let draw = circle.draw();
+        document.write("<br>");
+        document.write(circle.location['x']);
+        document.write("<br>");
+        document.write(circle.location['y']);
+        document.write($draw);
+
+
+    </script>
+</body>
+</html>

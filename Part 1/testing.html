@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>jquery</title>
+    <!-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"> -->
+    <script src="jquery.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="main.css">
+    </script>
+
+</head>
+<body>
+
+    <button id="show" type="button">show Me</button>
+    <button id="hide" type="button">Hide Me</button>
+
+    <h1 style="display: none;width:250px;padding:100px;text-align: center;color:white;background:black;" id="blck">Fahad Bin Munir</h1>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //show code start
+            $("#show").click(function(){
+                //alert("hey,I'm jQuery.");
+                $("#blck").slideDown(2000,function() {
+                    $("#blck").css("background","orange");
+                    $("#blck").html("Done");
+                });
+            });
+            //show code edned
+
+            //hide code start
+            $("#hide").click(function() {
+
+                $("#blck").slideUp(2000);
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
