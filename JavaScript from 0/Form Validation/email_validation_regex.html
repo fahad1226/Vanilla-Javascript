@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Email Validation Via Regular Expression</title>
+    <script>
+    function Email() {
+        let email = document.getElementById('eml').value;
+        let regx = /^([a-z A-Z 0-9\.-]+)@()$/;
+
+        if (regx.test(email)) {
+            document.getElementById('emaillbl').innerHTML = "Valid";
+            document.getElementById('emaillbl').style.visibility = "visible";
+            document.getElementById('emaillbl').style.color = "green";
+        } else {
+            document.getElementById('emaillbl').innerHTML = "Invalid";
+            document.getElementById('emaillbl').style.visibility = "visible";
+            document.getElementById('emaillbl').style.color = "red";
+        }
+    }
+
+    </script>
+</head>
+<body>
+    <form>
+        <input id="eml" type="text" placeholder="email">
+        <label id="emaillbl" style="visibility: hidden;color:red">Invalid</label><br>
+        <button onClick="Email()" type="button">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <script>
+    function check() {
+        let uname = "fahad_cse";
+        let pwd = 1234;
+        let input_user = document.getElementById('uname').value;
+        let input_pwd = document.getElementById('pwd').value;
+
+        if (uname == input_user && pwd == input_pwd) {
+            alert('Login Successfully')
+        } else {
+            alert('wrong information');
+        }
+    }
+   
+    </script>
+<body>
+    <input id="uname" type="text" placeholder="Username">
+    <br>
+    <input id="pwd" type="password" placeholder="Password">
+    <br>
+    <button onclick="check()" id="btn">Submit</button>
+</body>
+</html>

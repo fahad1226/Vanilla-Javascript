@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+    <script>
+    
+        function Gender() {
+            const male = document.getElementById('m');
+            const female = document.getElementById('f');
+            const others = document.getElementById('o');
+
+            if (male.checked == true) {
+                document.write('<h2>Your Gender is '+male.value+'</h2>')
+                alert(male.value);
+            } else if(female.checked == true){
+                document.write('<h2>Your Gender is '+female.value+'</h2>')
+                alert(female.value);
+            }
+            else{
+                document.write('<h2>Your Gender is '+others.value+'</h2>')
+                alert(others.value);
+            }
+        }
+    
+    
+    </script>
+<body>
+    <h2>Gender Checking Site</h2>
+    <p>Hahaha....</p>
+    <hr>
+
+    <input id="m" type="radio" value="male">Male</input><br>
+    <input id="f" type="radio" value="female">Female</input><br>
+    <input id="o" type="radio" value="others">Others</input><br>
+    <button onclick="Gender()"  >Check</button>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    
+    function Vlidate() {
+        let username = document.getElementById('uname').value;
+        //let regx = /E00/;
+        //let regx = /[a-x]00/i;
+        let regx = /[^1-9]abc/i;
+        if(regx.test(username)) {
+            alert('valid');
+            return false;
+        }
+        else {
+            alert('Invalid username');
+            return false;
+        }
+    }
+    
+    </script>
+</head>
+<body>
+    <form onsubmit="return Vlidate()" action="welcome.html">
+        <input id="uname" type="text" placeholder="Username">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

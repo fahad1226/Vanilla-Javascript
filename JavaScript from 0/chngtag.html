@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    
+    function classname() {
+       var store = document.getElementsByClassName('mypara');
+       for (var i = 0;i<store.length;i++) {
+           store[i].style.color = 'red';
+       }
+    }
+    
+    </script>
+</head>
+<body>
+   <p class="mypara">paragraph one</p>
+   <p>paragraph two</p>
+   <p class="mypara">paragraph three</p>
+   <p >paragraph four</p>
+   <p class="mypara">paragraph five</p>
+   <button onclick="classname()">Click To Change</button>
+</body>
+</html>

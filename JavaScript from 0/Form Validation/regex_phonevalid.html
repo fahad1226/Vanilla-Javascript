@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regular Expression</title>
+    <script>
+    
+    function Validate() {
+        let phone = document.getElementById('phone').value;
+        let regx = /^016\d{8}$/;
+        if (regx.test(phone)) {
+            document.getElementById('phonelbl').innerHTML = "Valid";
+            document.getElementById('phonelbl').style.visibility = "visible";
+            document.getElementById('phonelbl').style.color = "green";
+
+        } else {
+            document.getElementById('phonelbl').innerHTML = "Invalid";
+            document.getElementById('phonelbl').style.visibility = "visible";
+            document.getElementById('phonelbl').style.color = "red";
+        }
+    }
+    
+    </script>
+</head>
+<body>
+    <form>
+        <input id="phone" type="text" placeholder="Phone">
+        <label id="phonelbl" style="color:red;visibility: hidden">Invalid</label><br>
+        <button onClick="Validate()" type="button">Check</button>
+    </form>
+</body>
+</html>
